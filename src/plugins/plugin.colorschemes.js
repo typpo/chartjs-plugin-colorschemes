@@ -90,14 +90,14 @@ var ColorSchemesPlugin = {
 					if (typeof dataset.borderColor === 'undefined' || override) {
 						dataset[EXPANDO_KEY].borderColor = dataset.borderColor;
 						dataset.borderColor = color;
-					}
-					if (typeof dataset.pointBackgroundColor === 'undefined' || override) {
-						dataset[EXPANDO_KEY].pointBackgroundColor = dataset.pointBackgroundColor;
-						dataset.pointBackgroundColor = helpers.color(color).alpha(fillAlpha).rgbString();
-					}
-					if (typeof dataset.pointBorderColor === 'undefined' || override) {
-						dataset[EXPANDO_KEY].pointBorderColor = dataset.pointBorderColor;
-						dataset.pointBorderColor = color;
+            if (typeof dataset.pointBackgroundColor === 'undefined' || override) {
+              dataset[EXPANDO_KEY].pointBackgroundColor = dataset.pointBackgroundColor;
+              dataset.pointBackgroundColor = helpers.color(color).alpha(fillAlpha).rgbString();
+            }
+            if (typeof dataset.pointBorderColor === 'undefined' || override) {
+              dataset[EXPANDO_KEY].pointBorderColor = dataset.pointBorderColor;
+              dataset.pointBorderColor = color;
+            }
 					}
 					break;
 				// For doughnut and pie chart, backgroundColor is set to an array of colors
